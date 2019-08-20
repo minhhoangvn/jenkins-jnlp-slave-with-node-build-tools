@@ -28,5 +28,4 @@ ENV NODE_PATH=$NVM_DIR/v$NODE/lib/node_modules \
   PATH=$NVM_DIR/versions/node/v$NODE/bin:$PATH
 
 COPY jenkins-slave /usr/local/bin/jenkins-slave
-# ENTRYPOINT ["jenkins-slave"]
-CMD echo 2 && tail -f /dev/null
+ENTRYPOINT ["jenkins-slave"]
